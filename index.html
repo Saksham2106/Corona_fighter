@@ -1,0 +1,90 @@
+<html>
+	
+	<head>
+		<title> Corona Fighter Game </title>
+		<link rel="stylesheet" type="text/css" href="game.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+		<style>
+			#mycanvas{
+				background-image: url("Assets/back.jpeg") ; 
+				border:1px solid red;
+				background-size: 100% 100%;
+			}
+		</style>
+
+	</head>
+
+	<body onload="docReady()">
+		<div id="canvas">
+			   
+				<h1 id="head">The Great Corona Combanant</h1>
+        
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   						 <div class="modal-dialog">
+    		    				<div id="backcol" class="modal-content">
+            						<div class="modal-header">
+            							      <h4 id="leftt" class="modal-title" id="myModalLabel">INSTRUCTIONS</h4>
+              								  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+           						    </div>
+          					         <div class="modal-body">
+                                         <ul>	
+	          					         	<li>Hover on <b>MOVE</b> button to move forward towards gem and remove the cursor from  <b>	MOVE</b> button to stop the player.</li>
+	          					         	<br>	
+	          					         	<li>Health Score is increased by 10 every pixel player moves</li> <br>	
+	          					         	 <b>score = score + 10 </b><br>	
+	          					         	<li>If player and corona virus collide your score is decreased by 100 </li> <br>	
+	                                        <b>score = score - 100	</b> <br>	
+                                          
+	                                        <li>You lose if at any point of time during the game, the player <b>score becomes negative </li> 	</b>
+	                                        <br>
+	                                        <li>Default game mode is <b>HARD</b>. By decreasing game level, you have a better chance to live :)</li>
+                                         </ul>
+
+	          					     </div>
+          			                 <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                 </div>
+                         </div>
+				</div>
+				<div id="stripe">
+		            <!--<a class="website" href="https://saksham2106.github.io/">Back to my website :))</a> -->
+		            <button class="btn btn-success" onclick="window.open('https://saksham2106.github.io/', '_blank');">Back to website:)</button>
+					<button id="reset" class="btn btn-secondary effects" data-toggle="modal" data-target="#myModal">Instructions</button>
+					<button class="btn btn-primary" onClick="window.location.reload();">New Game</button>
+					<span id="message"></span>
+					<button type="button" class="btn btn-success">Game Modes</button>
+					<button class= "btn btn-primary mode">Easy</button>
+					<button class="btn btn-warning mode">medium</button>
+					<button class="btn btn-danger mode selected">Hard</button>
+				</div>
+                 <br>
+		         <div class="canvas" style="text-align:center">
+		         	<canvas id="mycanvas"></canvas>
+		         </div>
+		         
+		          <div id="confirm">
+		          	    <br><br><br>
+        				 <button onClick="window.location.reload();" class="yes">Play Again?</button>
+     			 </div>
+		         <div style="text-align:center">
+		         	    <button type="button" id="myBtn" class="btn btn-primary btn-lg">MOVE</button>
+		         	     <!--<button type="button" id="right" class="btn btn-primary btn-lg">RIGHT</button> -->
+		         </div>
+		         
+     			
+		</div>
+		
+		<script src="game.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	</body>
+
+
+
+</html>
